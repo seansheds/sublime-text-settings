@@ -1,0 +1,27 @@
+<snippet>
+	<content><![CDATA[
+/**
+ * [description]
+ * @class [ClassName]
+ * @return {Model} An object instance
+ */
+var ${1} = Backbone.Model.extend({
+	
+	/**
+	 * Default attributes for this model.
+	 * @type {Object}
+	 */
+	defaults: {
+		${2}
+	},
+
+	initialize: function() {
+		${3}
+	}
+});
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>bbm</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>

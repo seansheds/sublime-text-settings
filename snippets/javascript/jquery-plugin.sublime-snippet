@@ -1,0 +1,46 @@
+<snippet>
+    <content><![CDATA[
+(function ( \$, window, document, undefined ) {
+
+    // Create the defaults once
+        var pluginName = "${1:name}",
+        defaults = {
+            propertyName: "value"
+        };
+
+    // The actual plugin constructor
+    function ${2:snippet}( element, options ) {
+                this.element = element;
+
+        this.options = \$.extend( {}, defaults, options) ;
+
+        this._defaults = defaults;
+        this._name = pluginName;
+
+        this.init();
+    }
+
+    \$.extend(${2:snippet}.prototype, {
+        init: function () {
+
+        }
+    });
+
+    \$.fn[pluginName] = function ( options ) {
+        return this.each(function () {
+            if (!\$.data(this, pluginName)) {
+                \$.data(this, pluginName,
+                new ${2:snippet}( this, options ));
+            }
+        });
+    };
+
+    \$.fn[ pluginName ].defaults = defaults;
+
+})( jQuery, window, document );
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>jqplug</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.js</scope>
+</snippet>

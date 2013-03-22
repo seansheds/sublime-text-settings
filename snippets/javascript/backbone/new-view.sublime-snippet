@@ -1,0 +1,58 @@
+<snippet>
+	<content><![CDATA[
+/**
+ * [description]
+ * @class [ClassName]
+ * @returns {View} An object instance
+ */
+var ${1:View} = Backbone.View.extend({
+	
+	/**
+	 * The element to bind this object to.
+	 * @type {String}
+	 */
+	el: '${2}',
+
+	/**
+	 * Default options for each instance.
+	 * @type {Object}
+	 */
+	defaults: {
+		${3}
+	},
+
+	events: {
+		${4}
+	},
+
+	/**
+	 * [initialize description]
+	 * @param  {Object} opts Default options
+	 * @return {void}
+	 */
+	initialize: function(opts) {
+		var self = this;
+
+		${5}
+
+		self.render();
+	},
+
+	/**
+	 * [render description]
+	 * @return {Object} `this` object instance
+	 */
+	render: function() {
+		var self = this;
+
+		${6}
+
+		return self;
+	}
+});
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>bbv</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>
